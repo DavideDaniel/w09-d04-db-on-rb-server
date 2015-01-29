@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>restful CRUD</title>
+</head>
+<body>
+	<ul>
+		<% pets.each do |pet| %>
+		<li><%= pet[1]  %> is a <%= pet[2]  %>.
+			This pet has an id of <a href="/pet/<%= pet[0] %>">
+			<%= pet[0]  %></a>.
+		<%	end %>
+		</li>
+	</ul>
+
+	<h3>Add a pet here:</h3>
+	<form action="/pet" method="post">
+		<input type="text" name="name" placeholder="pet name" required>
+		<input type="text" name="type" placeholder="pet type" required>
+		<button>ADD IT!</button>
+	</form>
+		
+</body>
+</html>
