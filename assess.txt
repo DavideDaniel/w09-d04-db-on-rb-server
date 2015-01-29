@@ -1,0 +1,17 @@
+CREATE TABLE chairs (
+id INTEGER PRIMARY KEY,
+color TEXT, 
+legs INTEGER);
+
+INSERT INTO 'chairs' ('color', 'legs') VALUES
+  ('green', '4'),
+  ('blue', '4'),
+  ('yellow', '3'),
+  ('blue', '3'),
+  ('green', '3');
+
+SELECT * FROM chairs;
+SELECT * FROM chairs where color = 'blue';
+DELETE FROM chairs WHERE id = 4;
+INSERT INTO 'chairs' ('color', 'legs') VALUES
+  ('chartreuse', '2');
